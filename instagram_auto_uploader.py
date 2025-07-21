@@ -3,7 +3,7 @@ from telegram import Update, Bot
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from instagrapi import Client
-import google.generativeai as genai
+import google.generativeai as Gemini
 
 BOT_TOKEN = os.getenv("8027728156:AAEU3dfD4Bf9POmwGWtfRVbFUwrZqCh7x_A")
 INSTAGRAM_USERNAME = os.getenv("anay_a.3")
@@ -16,11 +16,11 @@ UPLOADED_FOLDER = "uploaded"
 os.makedirs(REELS_FOLDER, exist_ok=True)
 os.makedirs(UPLOADED_FOLDER, exist_ok=True)
 
-genai.configure(api_key=AAHTmVSa3DH524q02W9QqRo078AEpLq1_6s)
+genai.configure(api_key=GEMINI_API_KEY)
 
 async def generate_caption():
     try:
-        model = genai.GenerativeModel("gemini-pro")
+        model = Gemini.GenerativeModel("gemini-pro")
         response = model.generate_content("Write a short, trendy Instagram reel caption with 2 hashtags.")
         return response.text.strip()
     except Exception as e:
