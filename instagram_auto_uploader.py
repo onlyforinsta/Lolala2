@@ -5,18 +5,18 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from instagrapi import Client
 import google.generativeai as genai
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-INSTAGRAM_USERNAME = os.getenv("INSTAGRAM_USERNAME")
-INSTAGRAM_PASSWORD = os.getenv("INSTAGRAM_PASSWORD")
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-OWNER_TELEGRAM_ID = int(os.getenv("OWNER_TELEGRAM_ID", "0"))
+BOT_TOKEN = os.getenv("8027728156:AAEU3dfD4Bf9POmwGWtfRVbFUwrZqCh7x_A")
+INSTAGRAM_USERNAME = os.getenv("anay_a.3")
+INSTAGRAM_PASSWORD = os.getenv("Kartik+1234")
+GEMINI_API_KEY = os.getenv("AAHTmVSa3DH524q02W9QqRo078AEpLq1_6s")
+OWNER_TELEGRAM_ID = int(os.getenv("9235192647", "0"))
 
 REELS_FOLDER = "reels_queue"
 UPLOADED_FOLDER = "uploaded"
 os.makedirs(REELS_FOLDER, exist_ok=True)
 os.makedirs(UPLOADED_FOLDER, exist_ok=True)
 
-genai.configure(api_key=GEMINI_API_KEY)
+genai.configure(api_key=AAHTmVSa3DH524q02W9QqRo078AEpLq1_6s)
 
 async def generate_caption():
     try:
